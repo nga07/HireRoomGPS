@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Toolbar
+        android:background="@color/Gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/tool_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lime Home(Staff)"
+            android:textColor="@color/Green"
+            android:textSize="@dimen/sp_30"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_logout_24"
+            android:layout_gravity="right"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:id="@+id/button_logout"/>
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/button_require_verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_green3a_border_15dp"
+        android:gravity="center"
+        android:text="Danh sách yêu cầu xác thực"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/tool_bar"/>
+
+    <TextView
+        android:id="@+id/button_verifying"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginVertical="@dimen/dp_50"
+        android:background="@drawable/bg_green3a_border_15dp"
+        android:gravity="center"
+        android:text="Danh sách đang xác thực"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/button_require_verify"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

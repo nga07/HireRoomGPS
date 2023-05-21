@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_24"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/ic_chat_24"
+        android:title="Tin nhắn" />
+    <item
+        android:id="@+id/staff_statis"
+        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:title="Thống kê" />
+</menu>

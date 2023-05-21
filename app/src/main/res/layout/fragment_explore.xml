@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#59EAEAEA">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container_loading"
+        app:cardBackgroundColor="@android:color/transparent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_map"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/container_map"
+        app:layout_constraintBottom_toBottomOf="@id/container_map"
+        app:layout_constraintStart_toStartOf="@id/container_map"
+        app:layout_constraintEnd_toEndOf="@id/container_map"
+        android:src="@drawable/ic_baseline_add_location_24"
+        android:id="@+id/image_add"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="@id/container_map"
+        app:layout_constraintEnd_toEndOf="@id/container_map">
+
+        <ImageView
+            android:id="@+id/button_my_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_my_location_24" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/bg_green3a_border_15dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_10"
+        android:text="Tìm kiếm quanh đây"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/container_map"
+        app:layout_constraintEnd_toStartOf="@+id/container_my_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Kết quar tìm kiếm cho: "
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/container_map" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_search">
+
+        <TextView
+            android:id="@+id/text_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Không tìm thấy được kết quả tại vị trí này" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_room"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_search"
+        tools:listitem="@layout/item_user" />
+</androidx.constraintlayout.widget.ConstraintLayout>

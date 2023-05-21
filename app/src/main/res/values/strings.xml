@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Final Application</string>
+    <string name="Email">Email</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign up</string>
+    <string name="loginwithgoogle">Login with google</string>
+    <string name="createaccount">Create account: </string>
+    <string name="changepassword">Change Password</string>
+    <string name="cancel">cancel</string>
+    <string name="submit">submit</string>
+    <string name="oldpassword">Enter old password</string>
+    <string name="newpassword">Confirm new password</string>
+    <string name="confirmpassword">Enter new password</string>
+    <string name="chaneprofile">Change Profile</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="bankname">Bank Account Name</string>
+    <string name="accountNumber">Bank AccountNumber</string>
+    <string name="logout">Thoát</string>
+    <string name="message">Messages</string>
+    <string name="search">Search</string>
+    <string name="nodata">No data founded</string>
+    <string name="no_internet">No Internet, Please check and try again</string>
+    <string name="enter_message">Enter message...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

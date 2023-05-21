@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.finalapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".screen.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/image_home"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".screen.invoice.InvoiceActivity"
+            android:label="Merchant Demo"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk" />
+            </intent-filter>
+        </activity>
+        <service android:name="org.jitsi.meet.sdk.ConnectionService"
+            android:exported="true"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBLnuZW4sdPIBWAaPgF4u23msdwVzGt5i4" />
+
+        <activity
+            android:name=".screen.mainstaff.MainStaffActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.mypost.MyPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.searchpost.SearchPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.postdetail.PostDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.detailpostsearch.PostSearchDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.createpostsearch.CreatePostSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.createpost.CreatePostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.outgoing.OutgoingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.incoming.IncomingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.search.SearchActivity"
+            android:exported="false" />
+        <activity android:name=".screen.favorite.FavoriteActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".screen.launch.LaunchActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".screen.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.chatroom.ChatRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.createaccount.CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.login.LoginActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".screen.FcmService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

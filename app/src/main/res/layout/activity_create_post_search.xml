@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_10"
+    android:orientation="vertical"
+    tools:context=".screen.createpostsearch.CreatePostSearchActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tìm phòng ở"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_23" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Địa điểm"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_20" />
+
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Tỉnh/Thành phố" />
+
+    <Spinner
+        android:id="@+id/spinner_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Quận/Huyện" />
+
+    <Spinner
+        android:id="@+id/spinner_distrisct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Chi phí"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_20" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_cost_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/text_cost_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Từ"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_cost_from_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="VND"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_cost_from" />
+
+        <EditText
+            android:id="@+id/edittext_cost_from"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/text_cost_from_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_cost_from" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/error_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="vui lòng nhập trường này"
+        android:visibility="gone"
+        android:textColor="@color/Red" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_cost_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/text_cost_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đến"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_cost_to_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="VND"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_cost_to" />
+
+        <EditText
+            android:id="@+id/edittext_cost_to"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@id/text_cost_to_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_cost_to" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/error_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="vui lòng nhập trường này"
+        android:textColor="@color/Red"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="Yêu cầu"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_20" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/text_requied"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_border_15dp"
+        android:paddingStart="@dimen/dp_10"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/error_require"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="vui lòng nhập trường này"
+        android:textColor="@color/Red"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/button_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/bg_green3a_border_15dp"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Đăng bài"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20" />
+
+</LinearLayout>

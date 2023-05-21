@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="20"
+    android:background="@color/Gray"
+    android:id="@+id/container_utility"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_bed_35"
+        android:padding="5dp"
+        android:layout_weight="3"
+        android:id="@+id/imge_icon"/>
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:text="Máy nước nóng"
+        android:textSize="16sp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
